@@ -7,7 +7,7 @@ import Footer from "../components/Footer.vue"
 <template>
   <div class="about">
     <div class="mission-container">
-      <p class="title">Mission</p>
+      <p class="mission-title">Mission</p>
       <p class="large-text">Providing automated analysis of open-source cryptocurrency codebases</p>
       <p class="medium-text">with the goal of discovering price catalysts thru code, and evaluating project viability.
       </p>
@@ -58,7 +58,7 @@ import Footer from "../components/Footer.vue"
     gap: 3rem;
   }
 
-  .title {
+  .mission-title {
     width: 75%;
 
     /* Desktop Header 4 */
@@ -81,8 +81,8 @@ import Footer from "../components/Footer.vue"
 
     flex: none;
     order: 0;
-    margin-bottom: 0px;
-    margin-top: 0px
+    margin-left: 0rem;
+    margin-top: 0rem;
   }
 
   .large-text {
