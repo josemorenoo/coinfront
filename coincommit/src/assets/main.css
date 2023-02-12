@@ -9,8 +9,9 @@ body {
   position: fixed;
   height: 100%;
   width: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('background_stars.png') no-repeat center center fixed;
-  background-size: auto;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('background_stars.png');
+  background-size: 100% 101%;
+  background-repeat: no-repeat;
 }
 
 #app {
@@ -31,8 +32,9 @@ body {
     width: 100%;
     display: flex;
     place-items: center;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('background_stars.png') no-repeat center center fixed;
-    background-size: auto;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('background_stars.png');
+    background-size: 100% 101%;
+    background-repeat: no-repeat;
     mix-blend-mode: normal;
   }
 

@@ -40,10 +40,13 @@
 }
 
 .search-button {
-    background-image: url('../../assets/search.png');
+    background-image: url(/src/assets/search.png);
     background-size: cover;
     background-position: center;
-    padding: 0.5rem;
+    padding: 0.2rem;
     cursor: pointer;
+    width: 23px;
+    height: 23px;
+    margin-right: 6px;
 }
 </style>

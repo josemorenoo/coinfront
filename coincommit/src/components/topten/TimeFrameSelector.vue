@@ -44,6 +44,7 @@ export default {
     width: fit-content;
     border: 1px solid #ABB3D7;
     border-radius: 8px;
+    height: auto;
 }
 
 .time-frame {
@@ -54,24 +55,12 @@ export default {
     cursor: pointer;
 }
 
-.selected-tf {
-    background-color: #F6F8FF;
-    height: 36px;
-    width: 36px;
-    border-radius: 8px;
-    margin-top: auto;
-    margin-bottom: auto;
-    cursor: pointer;
-}
-
-
-.label-text {
+.time-frame-selector .label-text {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
-    color: #20254A;
 
     justify-content: center;
     display: flex;
@@ -79,5 +68,27 @@ export default {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    color: #F6F8FF;
+}
+
+.time-frame-selector .selected-tf .label-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 36px;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #20254A;
+    background-color: #F6F8FF;
+    height: 36px;
+    width: 36px;
+    border-radius: 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
 }
 </style>
