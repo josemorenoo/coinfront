@@ -28,19 +28,27 @@ export default {
     position: absolute;
     left: 5px;
     padding: 0.25rem;
-    font-size: 12px;
-    color: #120B26
+    font-size: 14px;
+    color: #120B26;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
 }
 
 .bar-value-outside {
     position: absolute;
     left: 5px;
-    bottom: 0;
     padding: 0.25rem;
-    font-size: 12px;
+
+    font-size: 14px;
     color: #F6F8FF;
     min-width: 1rem;
     white-space: nowrap;
     left: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
 }
 </style>

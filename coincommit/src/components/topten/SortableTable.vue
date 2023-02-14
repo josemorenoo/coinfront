@@ -2,10 +2,12 @@
     <table class="topten-table">
         <thead class="thead">
             <tr>
-                <th class="headers" v-for="column in columns" @click="sortBy(column.key)">
+                <th class="headers" v-for="column in columns" @click="sortBy(column.key)"
+                    :style="{ 'width': this.columnWidths[column.key] + '%' }">
                     {{ column.label }}
-                    <span v-if="sortKey === column.key && column.key !== 'project'"
-                        :class="{ 'arrow-down': sortOrders[column.key] === 1, 'arrow-up': sortOrders[column.key] === -1 }"></span>
+                    <span class=" arrow"
+                        :class="{ 'arrow-down': sortOrders[column.key] === 1, 'arrow-up': sortOrders[column.key] === -1 }">
+                    </span>
                 </th>
             </tr>
         </thead>
@@ -26,8 +28,20 @@ export default {
     data() {
         return {
             sortKey: 'lines_of_code',
-            sortOrders: { 'lines_of_code': -1 },
+            sortOrders: {
+                'price_change': 0,
+                'consecutive_days': 0,
+                'authors': 0,
+                'lines_of_code': -1,
+            },
             maxBarValue: 0,
+            columnWidths: {
+                'project': 18,
+                'price_change': 18,
+                'consecutive_days': 18,
+                'authors': 14,
+                'lines_of_code': 50,
+            }
         };
     },
     props: {
@@ -57,8 +71,19 @@ export default {
     },
     methods: {
         sortBy(key) {
-            this.sortKey = key;
-            this.sortOrders[key] = this.sortOrders[key] * -1;
+            if (key !== 'project') {
+                this.sortKey = key;
+                let newKeyValue = 1;
+                if (this.sortOrders[key] != 0) {
+                    newKeyValue = this.sortOrders[key] * -1;
+                }
+
+                // reset all the sort keys to remove the arrows first
+                Object.keys(this.sortOrders).forEach(key => {
+                    this.sortOrders[key] = 0;
+                });
+                this.sortOrders[key] = newKeyValue;
+            }
         },
     },
 };
@@ -66,6 +91,7 @@ export default {
 
 <style>
 .topten-table {
+    padding-top: 2rem;
     height: 45rem;
     width: 84%;
 }
@@ -73,6 +99,7 @@ export default {
 .thead {
     height: 40px;
 }
+
 
 .headers {
     font-family: 'Roboto';
@@ -82,6 +109,15 @@ export default {
     line-height: 24px;
     color: #F6F8FF;
     text-align: left;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    margin-right: 12px;
 }
 
 .arrow-down {
@@ -90,8 +126,8 @@ export default {
     height: 0;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-top: 4px solid black;
-    transform: rotate(90deg);
+    border-top: 4px solid white;
+    transform: rotate(0deg);
     margin-left: 5px;
 }
 
@@ -101,8 +137,8 @@ export default {
     height: 0;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-bottom: 4px solid black;
-    transform: rotate(-90deg);
+    border-bottom: 4px solid white;
+    transform: rotate(-0deg);
     margin-left: 5px;
 }
 </style>

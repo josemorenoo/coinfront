@@ -40,6 +40,8 @@
 }
 
 .search-button {
+    border: none;
+    background: transparent;
     background-image: url(/src/assets/search.png);
     background-size: cover;
     background-position: center;

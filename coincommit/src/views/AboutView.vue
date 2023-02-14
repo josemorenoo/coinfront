@@ -38,231 +38,229 @@ import Footer from "../components/Footer.vue"
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 0rem;
-    overflow-y: auto;
-    height: 100%;
-  }
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0rem;
+  overflow-y: auto;
+  height: 100%;
+}
 
-  .mission-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 94rem;
-    padding-bottom: 2rem;
-    gap: 3rem;
-  }
+.mission-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 96rem;
+  padding-bottom: 2rem;
+  gap: 3rem;
+}
 
-  .mission-title {
-    width: 75%;
+.mission-title {
+  width: 75%;
 
-    /* Desktop Header 4 */
+  /* Desktop Header 4 */
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 150%;
-    /* or 36px */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  /* or 36px */
 
-    text-align: center;
+  text-align: center;
 
-    /* F6F8FF */
+  /* F6F8FF */
 
-    color: #F6F8FF;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    margin-left: 0rem;
-    margin-top: 0rem;
-  }
-
-  .large-text {
-    width: 75%;
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 130%;
-    /* or 73px */
-
-    align-items: center;
-    text-align: center;
-
-    /* White */
-
-    color: #FFFFFF;
+  color: #F6F8FF;
 
 
-    /* Inside auto layout */
+  /* Inside auto layout */
 
-    flex: none;
-    order: 1;
-    margin-bottom: 0px;
-    margin-top: 0px
-  }
+  flex: none;
+  order: 0;
+  margin-left: 0rem;
+  margin-top: 0rem;
+}
 
-  .medium-text {
-    width: 75%;
+.large-text {
+  width: 75%;
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 40px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 130%;
+  /* or 73px */
 
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
 
-    /* White */
+  /* White */
 
-    color: #FFFFFF;
+  color: #FFFFFF;
 
 
-    /* Inside auto layout */
+  /* Inside auto layout */
 
-    flex: none;
-    order: 2;
-    margin-bottom: 0px;
-    margin-top: 0px
-  }
+  flex: none;
+  order: 1;
+  margin-bottom: 0px;
+  margin-top: 0px
+}
 
-  .lets-go-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.medium-text {
+  width: 75%;
 
-    width: 14rem;
-    height: 3rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
 
-    /* 2CC3F3 */
+  align-items: center;
+  text-align: center;
 
-    background: #2CC3F3;
-    border-radius: 8px;
+  /* White */
 
-    /* Inside auto layout */
+  color: #FFFFFF;
 
-    flex: none;
-    order: 3;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    font-size: 18px;
-  }
 
-  .ellipse {
-    margin-bottom: -180px;
-    padding-top: 4rem;
-    z-index: -1;
-    background-size: cover;
-    background-position: center;
-  }
+  /* Inside auto layout */
 
-  .bottom {
-    display: flex;
-    flex-direction: column;
-    background-color: #120B26;
-  }
+  flex: none;
+  order: 2;
+  margin-bottom: 0px;
+  margin-top: 0px
+}
 
-  .roadmap-background {
-    width: 100%;
-    background-color: #120B26;
-  }
+.lets-go-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
-  .roadmap {
-    padding-left: 10%;
-    padding-right: 10%;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 5rem;
-  }
+  width: 14rem;
+  height: 3rem;
 
-  .future {
-    padding-left: 1rem;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
+  /* 2CC3F3 */
 
-    display: flex;
-    align-items: center;
+  background: #2CC3F3;
+  border-radius: 8px;
 
-    color: #6DF8FF;
-  }
+  /* Inside auto layout */
 
-  .card-holder {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-  }
+  flex: none;
+  order: 3;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 18px;
+}
 
-  .logo-container {
-    height: fit-content;
-  }
+.ellipse {
+  margin-bottom: -180px;
+  padding-top: 4rem;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
 
-  .linebreak {
-    background-color: #20254A;
-    height: 2px;
-  }
+.bottom {
+  display: flex;
+  flex-direction: column;
+  background-color: #120B26;
+}
 
-  .bottom-text {
-    background-color: #120B26;
-    margin-left: auto;
-    margin-right: auto;
+.roadmap-background {
+  width: 100%;
+  background-color: #120B26;
+}
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
+.roadmap {
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
 
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding-top: 4rem;
+.future {
+  padding-left: 1rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
 
-    color: #FFFFFF;
-  }
+  display: flex;
+  align-items: center;
 
-  .button-holder {
-    padding-top: 3rem;
-    padding-bottom: 6rem;
-  }
+  color: #6DF8FF;
+}
 
-  .inverse-button {
-    width: 14%;
-    margin-left: auto;
-    margin-right: auto;
+.card-holder {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
 
-    box-sizing: border-box;
-    border: 1px solid #2CC3F3;
-    background-color: #120B26;
-    border-radius: 8px;
+.logo-container {
+  height: fit-content;
+}
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 150%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #2CC3F3;
-    justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+.linebreak {
+  background-color: #20254A;
+  height: 2px;
+}
+
+.bottom-text {
+  background-color: #120B26;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 4rem;
+
+  color: #FFFFFF;
+}
+
+.button-holder {
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+
+.inverse-button {
+  width: 14%;
+  margin-left: auto;
+  margin-right: auto;
+
+  box-sizing: border-box;
+  border: 1px solid #2CC3F3;
+  background-color: #120B26;
+  border-radius: 8px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #2CC3F3;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 </style>
