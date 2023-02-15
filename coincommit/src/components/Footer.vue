@@ -15,6 +15,7 @@
     background-color: #0D071E;
     padding-top: 20px;
     padding-bottom: 20px;
+    width: 100%;
 }
 
 .khiza-logo-container {

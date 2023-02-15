@@ -59,6 +59,7 @@ export default {
   flex-direction: column;
   overflow-y: scroll;
   height: 100%;
+  justify-content: space-between;
 }
 
 .topten-container {
