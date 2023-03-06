@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "debug": "vite build --debug",
+    "build": "vite build & serve ./dist",
     "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "deploy": "aws s3 sync ./dist s3://coinfront"
   },
   "dependencies": {
     "@fontsource/roboto": "^4.5.8",

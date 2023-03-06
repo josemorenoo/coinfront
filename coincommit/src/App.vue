@@ -8,7 +8,6 @@ import { RouterLink, RouterView } from "vue-router";
       <img alt="Coin Commit" class="logo" src="@/assets/logo_and_title.png" @click="$router.push('/')" />
       <nav>
         <RouterLink to="/">Top Ten</RouterLink>
-        <RouterLink to="/analyze">Analyze</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
       <a href="https://twitter.com/coin_commit" target="_blank" class="logo_container">

@@ -2,18 +2,18 @@
     <table class="topten-table">
         <thead class="thead">
             <tr>
-                <th class="headers" v-for="column in columns" @click="sortBy(column.key)"
-                    :style="{ 'width': this.columnWidths[column.key] + '%' }">
-                    {{ column.label }}
+                <th class="headers" v-for="column in this.columns" @click="sortBy(column?.key)"
+                    :style="{ 'width': this.columnWidths[column?.key] + '%' }">
+                    {{ column?.label }}
                     <span class=" arrow"
-                        :class="{ 'arrow-down': sortOrders[column.key] === 1, 'arrow-up': sortOrders[column.key] === -1 }">
+                        :class="{ 'arrow-down': sortOrders[column?.key] === 1, 'arrow-up': sortOrders[column?.key] === -1 }">
                     </span>
                 </th>
             </tr>
         </thead>
         <tbody class="tbody">
-            <TableRow v-for="entry in filteredData" :entry="entry" :columns="columns" :key="entry.id"
-                :maxBarValue="maxBarValue" />
+            <TableRow v-for="tableEntry in this.filteredData" :tableRow="tableEntry" :columns="this.columns"
+                :maxBarValue="this.maxBarValue" />
         </tbody>
     </table>
 </template>
@@ -24,6 +24,16 @@ import TableRow from './TableRow.vue';
 export default {
     components: {
         TableRow,
+    },
+    props: {
+        tableData: {
+            type: Array,
+            default: []
+        },
+        columns: {
+            type: Array,
+            default: [{ label: "", key: "" }]
+        },
     },
     data() {
         return {
@@ -44,15 +54,18 @@ export default {
             }
         };
     },
-    props: {
-        tableData: Array,
-        columns: Array,
-    },
     computed: {
+        computedMaxBarValue() {
+            return Math.max.apply(Math, this.filteredData.map(function (o) { return o.lines_of_code; }));
+        },
         filteredData() {
             let sortKey = this.sortKey;
             let order = this.sortOrders[sortKey] || 1;
             let tableData = this.tableData;
+
+            if (!tableData) {
+                return [];
+            }
             if (sortKey) {
                 tableData = tableData.slice().sort((a, b) => {
                     a = a[sortKey];
@@ -61,9 +74,6 @@ export default {
                 });
             }
             return tableData;
-        },
-        computedMaxBarValue() {
-            return Math.max.apply(Math, this.filteredData.map(function (o) { return o.lines_of_code; }));
         }
     },
     mounted() {

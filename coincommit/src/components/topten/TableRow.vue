@@ -6,17 +6,17 @@ import RowLogoAndName from './tablerow/RowLogoAndName.vue';
 
 <template>
     <tr class="table-row">
-        <td v-for="column in columns" :key="column.key">
-            <div v-if="column.key === 'project'">
-                <RowLogoAndName :projectName="this.entry.project" />
+        <td v-for="column in this.columns" :key="column?.key">
+            <div v-if="column?.key === 'project'">
+                <RowLogoAndName :projectName="this.tableRow?.project" />
             </div>
-            <span class="row-text" v-if="column.key === 'consecutive_days' || column.key === 'authors'">{{
-                entry[column.key]
+            <span class="row-text" v-if="column?.key === 'consecutive_days' || column?.key === 'authors'">{{
+                this.tableRow?.[column?.key]
             }}</span>
-            <div v-if="column.key === 'price_change'" class="price">
+            <div v-if="column?.key === 'price_change'" class="price">
                 <RowPrice :priceNumber="priceNumber" :priceString="priceString" />
             </div>
-            <div v-if="column.key === 'lines_of_code'" class="bar" :style="{ width: barWidth + '%' }">
+            <div v-if="column?.key === 'lines_of_code'" class="bar" :style="{ width: barWidth + '%' }">
                 <RowBar :barWidth="barWidth" :barValue="barValue" />
             </div>
         </td>
@@ -31,22 +31,27 @@ export default {
         RowBar
     },
     props: {
-        entry: Object,
-        columns: Array,
+        tableRow: {
+            type: Object
+        },
+        columns: {
+            type: Array,
+            default: [{ label: "", key: "" }]
+        },
         maxBarValue: Number
     },
     computed: {
         barValue() {
-            return parseInt(this.entry.lines_of_code);
+            return parseInt(this.tableRow?.lines_of_code);
         },
         barWidth() {
-            return (this.entry.lines_of_code / this.maxBarValue) * 100;
+            return (this.tableRow?.lines_of_code / this.maxBarValue) * 100;
         },
         priceNumber() {
-            return parseInt(this.entry.price_change.match(/-?[\d,]+/)[0].replace(/,/g, ''));
+            return parseInt(this.tableRow?.price_change.match(/-?[\d,]+/)[0].replace(/,/g, ''));
         },
         priceString() {
-            return "$" + (this.entry.price_change[0] === '-' ? this.entry.price_change.substr(1) : this.entry.price_change);
+            return "$" + (this.tableRow?.price_change[0] === '-' ? this.tableRow?.price_change.substr(1) : this.tableRow?.price_change);
         },
     },
 };

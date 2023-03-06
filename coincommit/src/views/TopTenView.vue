@@ -13,7 +13,7 @@ import Footer from "../components/Footer.vue";
         <SearchBar />
         <TimeFrameSelector />
       </div>
-      <SortableTable :columns="columns" :tableData="tableData" />
+      <SortableTable :columns="this.columns" :tableData="this.tableData" />
     </div>
     <Footer />
   </div>
@@ -41,7 +41,7 @@ export default {
         { project: "ETH", price_change: "5,000 (1%)", consecutive_days: "23", authors: "53", lines_of_code: 4534 },
         { project: "ACH", price_change: "8,000 (+14%)", consecutive_days: "43", authors: "23", lines_of_code: 765 },
         { project: "ALGO", price_change: "-3,000 (-18%)", consecutive_days: "3", authors: "7", lines_of_code: 4354 },
-        { project: "FAKECOIN", price_change: "1,000 (+14%)", consecutive_days: "6346", authors: "4", lines_of_code: 734 },
+        { project: "RAD", price_change: "1,000 (+14%)", consecutive_days: "6346", authors: "4", lines_of_code: 734 },
         { project: "DOGE", price_change: "4,000 (+12%)", consecutive_days: "34", authors: "5", lines_of_code: 5678 },
         { project: "EOS", price_change: "7,000 (+17%)", consecutive_days: "87", authors: "8", lines_of_code: 56 },
         { project: "FEI", price_change: "6,000 (+4%)", consecutive_days: "12", authors: "3", lines_of_code: 345 },

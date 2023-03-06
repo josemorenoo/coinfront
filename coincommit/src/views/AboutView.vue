@@ -20,9 +20,9 @@ import Footer from "../components/Footer.vue"
         <div class="roadmap">
           <p class="future">Our Future</p>
           <div class="card-holder">
-            <Card :cardText="'Next step number 01 - Lorem ipsum dolor sit amet consectetur. Eget neque tellus nibh.'" />
-            <Card :cardText="'Next step number 02 - Lorem ipsum dolor sit amet consectetur. Eget neque tellus nibh.'" />
-            <Card :cardText="'Next step number 03 - Lorem ipsum dolor sit amet consectetur. Eget neque tellus nibh.'" />
+            <Card :cardText="'Event Viewer - Correlate important codebase events to price action movemements.'" />
+            <Card :cardText="'Industry Analysis - Explore patterns across sub-domains of Web3.'" />
+            <Card :cardText="'Smart Alerting - Automated ML-based alerting to predict the next big price swing.'" />
           </div>
         </div>
       </div>
