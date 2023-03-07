@@ -6,12 +6,12 @@ import RowLogoAndName from './tablerow/RowLogoAndName.vue';
 
 <template>
     <tr class="table-row">
-        <td v-for="column in this.columns" :key="column?.key">
+        <td v-for="column in columns" :key="column?.key">
             <div v-if="column?.key === 'project'">
-                <RowLogoAndName :projectName="this.tableRow?.project" />
+                <RowLogoAndName :projectName="tableRow?.project" />
             </div>
             <span class="row-text" v-if="column?.key === 'consecutive_days' || column?.key === 'authors'">{{
-                this.tableRow?.[column?.key]
+                tableRow?.[column?.key]
             }}</span>
             <div v-if="column?.key === 'price_change'" class="price">
                 <RowPrice :priceNumber="priceNumber" :priceString="priceString" />

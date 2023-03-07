@@ -13,7 +13,7 @@ import Footer from "../components/Footer.vue";
         <SearchBar />
         <TimeFrameSelector />
       </div>
-      <SortableTable :columns="this.columns" :tableData="this.tableData" />
+      <SortableTable :columns="columns" :tableData="tableData" />
     </div>
     <Footer />
   </div>

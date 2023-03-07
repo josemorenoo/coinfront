@@ -2,7 +2,7 @@
     <table class="topten-table">
         <thead class="thead">
             <tr>
-                <th class="headers" v-for="column in this.columns" @click="sortBy(column?.key)"
+                <th class="headers" v-for="column in columns" @click="sortBy(column?.key)"
                     :style="{ 'width': this.columnWidths[column?.key] + '%' }">
                     {{ column?.label }}
                     <span class=" arrow"
@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody class="tbody">
-            <TableRow v-for="tableEntry in this.filteredData" :tableRow="tableEntry" :columns="this.columns"
+            <TableRow v-for="tableEntry in this.filteredData" :tableRow="tableEntry" :columns="columns"
                 :maxBarValue="this.maxBarValue" />
         </tbody>
     </table>
