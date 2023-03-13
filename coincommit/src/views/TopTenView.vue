@@ -3,6 +3,8 @@ import SearchBar from '../components/topten/SearchBar.vue';
 import TimeFrameSelector from '../components/topten/TimeFrameSelector.vue';
 import SortableTable from '../components/topten/SortableTable.vue';
 import Footer from "../components/Footer.vue";
+
+import dailySummary from '@/summary.json'
 </script>
 
 <template>
@@ -29,6 +31,7 @@ export default {
   },
   data() {
     return {
+      dailySummary: dailySummary,
       columns: [
         { label: "Project", key: "project" },
         { label: "Price Change", key: "price_change" },
@@ -49,6 +52,9 @@ export default {
         { project: "POLY", price_change: "1,000 (+11%)", consecutive_days: "0", authors: "23", lines_of_code: 3456 },
       ],
     }
+  },
+  created() {
+    console.log(this.dailySummary)
   }
 }
 </script>
