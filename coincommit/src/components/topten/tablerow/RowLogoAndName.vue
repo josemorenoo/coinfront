@@ -1,9 +1,8 @@
 <template>
     <div class="logo-component">
-        <img class="logo" :src="`./src/assets/logos/${projectName.toUpperCase()}.png`"
-            :onerror="`this.src='./src/assets/logos/default.png'; this.classList.add('logo');`"> <span
-            class="project-name">{{
-    projectName.toUpperCase()
+        <img class="logo" :src="`/${projectName.toUpperCase()}.png`"
+            :onerror="`this.src='/default.png'; this.classList.add('logo');`"> <span class="project-name">{{
+                projectName.toUpperCase()
             }}</span>
     </div>
 </template>
